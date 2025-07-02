@@ -18,7 +18,7 @@ async def fetch_klines(client, symbol, interval, start_str, end_str, retries=3):
             if attempt < retries:
                 await asyncio.sleep(10 * attempt)
             else:
-                print(f"⚠️ [{symbol}] Все попытки исчерпаны. Пропускаем.")
+                print(f"⚠️ [{symbol}] Все попытки исчерпаны. Пропускаем!.")
                 return symbol, []
 
 
